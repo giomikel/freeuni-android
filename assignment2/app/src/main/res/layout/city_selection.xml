@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/flagsLL"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/flag_layout_top_margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/georgiaButton"
+            android:layout_width="@dimen/flag_dimension"
+            android:layout_height="@dimen/flag_dimension"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/georgia" />
+
+        <Space
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/UKButton"
+            android:layout_width="@dimen/flag_dimension"
+            android:layout_height="@dimen/flag_dimension"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/uk" />
+
+        <Space
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/jamaicaButton"
+            android:layout_width="@dimen/flag_dimension"
+            android:layout_height="@dimen/flag_dimension"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/jamaica" />
+
+        <Space
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cityNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/city_name_top_margin"
+        android:text="@string/city_name"
+        android:textSize="@dimen/city_name_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flagsLL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

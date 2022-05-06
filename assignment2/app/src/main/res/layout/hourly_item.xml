@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hourly_item_height"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/hourlyDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hourly_date_left_margin"
+            android:text="@string/date_default_text"
+            android:textSize="@dimen/date_text_size" />
+
+        <ImageView
+            android:id="@+id/hourlyWeatherImage"
+            android:layout_width="@dimen/hourly_weather_image_dimension"
+            android:layout_height="@dimen/hourly_weather_image_dimension"
+            android:layout_marginStart="@dimen/hourly_weather_image_left_margin"
+            android:contentDescription="@null"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/hourlyTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hourly_temperature_left_margin"
+            android:text="@string/temperature_default_text"
+            android:textSize="@dimen/hourly_temperature_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hourlyWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/hourly_weather_left_margin"
+            android:text="@string/weather_default_text"
+            android:textSize="@dimen/hourly_weather_text_size" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

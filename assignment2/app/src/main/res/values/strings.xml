@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">assignment2</string>
+    <string name="city_name">TBILISI</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="temperature_default_text">temperature</string>
+    <string name="weather_default_text">weather</string>
+    <string name="details_text">DETAILS</string>
+    <string name="pressure_text">Pressure</string>
+    <string name="humidity_text">Humidity</string>
+    <string name="feels_like_text">Feels Like</string>
+    <string name="temperature_text">Temperature</string>
+    <string name="date_default_text">date</string>
+</resources>

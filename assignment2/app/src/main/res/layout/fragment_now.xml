@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragments.NowFragment">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/city_selection"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/weatherImage"
+            android:layout_width="@dimen/weather_image_dimension"
+            android:layout_height="@dimen/weather_image_dimension"
+            android:layout_marginTop="@dimen/fragment_bottom_part_top_margin"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/temperature_top_margin"
+            android:text="@string/temperature_default_text"
+            android:textSize="@dimen/temperature_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherImage" />
+
+        <TextView
+            android:id="@+id/weatherTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/weather_top_margin"
+            android:text="@string/weather_default_text"
+            android:textSize="@dimen/weather_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureTextView" />
+
+        <LinearLayout
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/details_layout_horizontal_margin"
+            android:layout_marginTop="@dimen/details_layout_top_margin"
+            android:layout_marginRight="@dimen/details_layout_horizontal_margin"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherTextView">
+
+            <TextView
+                android:id="@+id/detailsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_text"
+                android:textSize="@dimen/details_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/detailsTemperatureText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/temperature_text"
+                        android:textSize="@dimen/details_text_size" />
+
+                    <TextView
+                        android:id="@+id/detailsFeelsLikeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/feels_like_text"
+                        android:textSize="@dimen/details_text_size" />
+
+                    <TextView
+                        android:id="@+id/detailsHumidityText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/humidity_text"
+                        android:textSize="@dimen/details_text_size" />
+
+                    <TextView
+                        android:id="@+id/detailsPressureText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/pressure_text"
+                        android:textSize="@dimen/details_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/detailsTemperatureNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/temperature_text"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/details_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsFeelsLikeNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/feels_like_text"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/details_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsHumidityNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/humidity_text"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/details_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsPressureNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/details_top_margin"
+                        android:text="@string/pressure_text"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/details_text_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
