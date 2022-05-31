@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/general_vertical_separator"
+        android:layout_marginEnd="@dimen/item_list_margin"
+        android:background="@drawable/border_frame">
+
+        <TextView
+            android:id="@+id/itemListName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_list_margin"
+            android:layout_marginTop="@dimen/item_list_margin"
+            android:ellipsize="end"
+            android:maxLines="@integer/item_list_name_max_lines"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bigger_text_size"
+            app:layout_constraintBottom_toTopOf="@id/checkItem1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkItem1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_list_margin"
+            android:layout_marginTop="@dimen/item_list_margin"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:maxLines="@integer/check_item_max_lines"
+            android:minWidth="@dimen/checkbox_min_dim"
+            android:minHeight="@dimen/checkbox_min_dim"
+            android:textSize="@dimen/smaller_text_size"
+            android:translationX="@dimen/checkbox_translation_x"
+            app:layout_constraintBottom_toTopOf="@+id/checkItem2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemListName"
+            app:layout_goneMarginBottom="@dimen/item_list_margin" />
+
+        <CheckBox
+            android:id="@+id/checkItem2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_list_margin"
+            android:layout_marginTop="@dimen/item_list_margin"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:maxLines="@integer/check_item_max_lines"
+            android:minWidth="@dimen/checkbox_min_dim"
+            android:minHeight="@dimen/checkbox_min_dim"
+            android:textSize="@dimen/smaller_text_size"
+            android:translationX="@dimen/checkbox_translation_x"
+            app:layout_constraintBottom_toTopOf="@+id/checkItem3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkItem1"
+            app:layout_goneMarginBottom="@dimen/item_list_margin" />
+
+        <CheckBox
+            android:id="@+id/checkItem3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_list_margin"
+            android:layout_marginTop="@dimen/item_list_margin"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:maxLines="@integer/check_item_max_lines"
+            android:minWidth="@dimen/checkbox_min_dim"
+            android:minHeight="@dimen/checkbox_min_dim"
+            android:textSize="@dimen/smaller_text_size"
+            android:translationX="@dimen/checkbox_translation_x"
+            app:layout_constraintBottom_toTopOf="@+id/threeDots"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkItem2"
+            app:layout_goneMarginBottom="@dimen/item_list_margin" />
+
+        <TextView
+            android:id="@+id/threeDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_list_margin"
+            android:layout_marginTop="@dimen/item_list_margin"
+            android:text="@string/threeDotText"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/checkedItemsText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkItem3"
+            app:layout_goneMarginBottom="@dimen/item_list_margin" />
+
+        <TextView
+            android:id="@+id/checkedItemsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/item_list_margin"
+            android:layout_marginTop="@dimen/item_list_margin"
+            android:layout_marginBottom="@dimen/item_list_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/threeDots" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

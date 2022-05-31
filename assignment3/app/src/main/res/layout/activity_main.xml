@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="ge.gmikeladze.assignment3.mvvm.view_models.MainViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".mvvm.views.MainActivity">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_and_edittext_height"
+                android:layout_marginLeft="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/screen_margin"
+                android:layout_marginRight="@dimen/screen_margin"
+                android:background="@drawable/border_frame"
+                android:hint="@string/search_your_notes"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="@dimen/edit_text_padding"
+                android:paddingEnd="@dimen/edit_text_padding"
+                android:textSize="@dimen/bigger_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pinnedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pinned_text_top_margin"
+                android:text="@string/pinned"
+                android:textSize="@dimen/smaller_text_size"
+                app:layout_constraintStart_toStartOf="@+id/searchBar"
+                app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pinnedRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pinnedText" />
+
+            <TextView
+                android:id="@+id/otherText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other"
+                android:textSize="@dimen/smaller_text_size"
+                app:layout_constraintStart_toStartOf="@id/pinnedText"
+                app:layout_constraintTop_toBottomOf="@id/pinnedRV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/unpinnedRV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/screen_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/otherText" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addItemButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:layout_marginBottom="@dimen/screen_margin"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_add"
+                app:borderWidth="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
