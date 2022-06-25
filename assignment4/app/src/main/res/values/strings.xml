@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">assignment4</string>
+    <string name="switch_to_dark">Switch to dark</string>
+    <string name="switch_to_light">Switch to light</string>
+    <string name="placeholder_time">23:59</string>
+    <string name="delete_item">Are you sure you want to delete item?</string>
+    <string name="positive">Yes</string>
+    <string name="negative">No</string>
+</resources>
